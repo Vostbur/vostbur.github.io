@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Little things | articles in the "Меморизы" category</title>
+    <title>Little things | articles tagged "WSL"</title>
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
@@ -16,8 +16,7 @@
     <header>
         <nav>
             <ul>
-
-                <li class="ephemeral selected"><a href="/category/memorizy.html">Меморизы</a></li>
+                <li class="ephemeral selected"><a href="/tag/wsl.html">WSL</a></li>
                 <li><a href="/">Home</a></li>
             </ul>
         </nav>
@@ -98,86 +97,8 @@ XDMCPTerminate="False"<br>
                     <a href="/zapusk-graficheskogo-interfeisa-ubuntu-v-podsisteme-windows-dlia-linux-wsl.html">posted at 20:05</a>
                     &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
                     &nbsp;&middot;
-                    &nbsp;<a href="/tag/wsl.html" class="tags">WSL</a>
+                    &nbsp;<a href="/tag/wsl.html" class="tags selected">WSL</a>
                     &nbsp;<a href="/tag/linux.html" class="tags">linux</a>
-                </div>
-            </article>            <h4 class="date">мар 30, 2020</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="/blog-na-github-pages-s-pelican.html" rel="bookmark" title="Permanent Link to &quot;Блог на GitHub Pages с Pelican&quot;">Блог на GitHub Pages с Pelican</a>
-                </h2>
-
-                
-                
-
-                <ol>
-<li>
-<p><a href="https://github.com/new">Создаем</a> два новых репозитория <em>username.github.io-src</em> и <em>username.github.io</em>.
-Первый для исходников, второй - сам сайт. Подробности <a href="https://pages.github.com/">здесь</a>.</p>
-</li>
-<li>
-<p>Делаем клон репозитория для исходников, подключаем репозиторий с сайтом как сабмодуль.<br>
-<code>git clone https://github.com/username/username.github.io-src.git</code><br>
-<code>cd username.github.io-src</code><br>
-  проверям, что склонировали правильно<br>
-<code>git remote -v</code><br>
-<code>git submodule add https://github.com/username/username.github.io.git output</code>  </p>
-</li>
-<li>
-<p>Устанавливаем pelican, markdown<br>
-<code>pip install pelican, markdown</code>  </p>
-</li>
-<li>
-<p>Выполняем настройку:<br>
-<code>pelican-quickstart</code>  </p>
-<p>Ответы на основные вопросы, остальные не важны:<br>
-- Где вы хотите создать свой новый веб–сайт? <strong>(Enter)</strong><br>
-- URL префикс:  <strong>http://username.github.io</strong><br>
-- Сформировать Fabfile/Makefile: <strong>Да</strong><br>
-- Авто-обновление и сценарий simpleHTTP: <strong>Да</strong><br>
-- Загрузить механизмы: <strong>Нет для всех, кроме GitHub Pages</strong><br>
-- Это ваша персональная страница (username.github.io)? <strong>да</strong>  </p>
-<p>Сообщение об ошибке (каталог output уже существует) игнорируйте.<br>
-В файле <em>publishconf.py</em> нужно установить переменную <em>DELETE_OUTPUT_DIRECTORY</em> в значение <em>False</em>.
-Иначе, после публикации, Pelican удалит output с сабмодулем.  </p>
-</li>
-<li>
-<p>Создаем первую запись, пример из <a href="https://docs.getpelican.com/en/stable/quickstart.html">документации</a>.
-Генерируем html-страницу и проверяем в локальном web-сервере на http://localhost:8000/<br>
-<code>pelican content</code><br>
-<code>pelican --listen</code>  </p>
-</li>
-<li>
-<p>Выкладывем на GitHub Pages:<br>
-<code>cd output</code><br>
-<code>git add .</code><br>
-<code>git commit -m "message"</code><br>
-<code>git push -u origin master</code><br>
-<code>cd ..</code><br>
-<code>git add .</code><br>
-<code>git commit -m "message"</code><br>
-<code>git push -u origin master</code>  </p>
-</li>
-</ol>
-<h4>Полезные ссылки:</h4>
-<ol>
-<li><a href="http://pelicanthemes.com/">Темы</a>. Подключение:<ul>
-<li>в username.github.io-src создаем каталог theme куда клонируем выбранную тему.</li>
-<li>в pelicanconf.py прописываем переменную THEME = 'theme/blue-penguin' где blue-penguin каталог с темой.</li>
-</ul>
-</li>
-<li><a href="https://github.com/getpelican/pelican-plugins">Плагины</a>.</li>
-<li><a href="https://github.com/getpelican/pelican/wiki/Tips-n-Tricks">Советы</a>.</li>
-</ol>
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="/blog-na-github-pages-s-pelican.html">posted at 11:00</a>
-                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="/tag/github.html" class="tags">github</a>
-                    &nbsp;<a href="/tag/pelican.html" class="tags">pelican</a>
                 </div>
             </article>
 
