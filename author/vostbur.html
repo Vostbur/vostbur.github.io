@@ -19,6 +19,7 @@
 
                 <li class="ephemeral selected"><a href="/author/vostbur.html">Vostbur</a></li>
                 <li><a href="/">Home</a></li>
+                <li><a href="https://github.com/Vostbur">GitHub</a></li>
             </ul>
         </nav>
         <div class="header_box">
@@ -26,7 +27,46 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">мар 30, 2020</h4>
+        <div id="content">            <h4 class="date">мар 31, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/sokhranenie-parolei-v-windows-credentials-locker-iz-python.html" rel="bookmark" title="Permanent Link to &quot;Сохранение паролей в Windows Credentials Locker из Python&quot;">Сохранение паролей в Windows Credentials Locker из Python</a>
+                </h2>
+
+                
+                
+
+                <ol>
+<li>
+<p>Ставим <a href="https://pypi.org/project/keyring/">keyring</a><br>
+<code>pip install keyring</code> </p>
+</li>
+<li>
+<p>Выполняем<br>
+<code>import keyring</code><br>
+<code>keyring.set_password("system", "username", "password")</code>  </p>
+</li>
+<li>
+<p>Результат<br>
+<img alt="Windows Credentials" src="/images/credentials.png"></p>
+</li>
+<li>
+<p>Доступ к данным <br>
+<code>keyring.get_password("system", "username")</code><br>
+<code>'password'</code> </p>
+</li>
+</ol>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/sokhranenie-parolei-v-windows-credentials-locker-iz-python.html">posted at 11:00</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/windows.html" class="tags">windows</a>
+                    &nbsp;<a href="/tag/python.html" class="tags">python</a>
+                </div>
+            </article>            <h4 class="date">мар 30, 2020</h4>
 
             <article class="post">
                 <h2 class="title">
