@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="russian">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Little things | Доступ по telnet к роутеру в GNS3 из Ansible в WSL</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Vostbur" />
+
+    <meta name="keywords" content="wsl,ansible" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://github.com/vostbur">GitHub</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/archives">Archives</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="/">Little things</a></h1>
+            <h2>A personal blog.</h2>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">апр 03, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/dostup-po-telnet-k-routeru-v-gns3-iz-ansible-v-wsl.html" rel="bookmark" title="Permanent Link to &quot;Доступ по telnet к роутеру в GNS3 из Ansible в WSL&quot;">Доступ по telnet к роутеру в GNS3 из Ansible в WSL</a>
+                </h2>
+
+                
+                
+
+                <p>В Windows запущен GNS3 с роутером, доступным по telnet (<em>ip 192.168.2.2</em>), установлена Ubuntu в WSL. Как управлять роутером через Ansible?</p>
+<ul>
+<li>
+<p>Ставим Ansible<br>
+<code>sudo apt install ansible</code>  </p>
+</li>
+<li>
+<p>Создаем файлы в домашнем каталоге  </p>
+</li>
+</ul>
+<p><strong>myhosts</strong>  </p>
+<blockquote>
+<p>[cisco-routers]<br>
+192.168.2.2  </p>
+</blockquote>
+<p><strong>ansible.cfg</strong>  </p>
+<blockquote>
+<p>[defaults]<br>
+inventory = ./myhosts<br>
+gathering = explicit</p>
+</blockquote>
+<p><strong>telnet_command_show_ver.yml</strong><br>
+<em>(логин без ввода имени пользователя)</em></p>
+<blockquote>
+<p>---<br>
+- name: Run show command on routers<br>
+hosts: cisco-routers<br>
+tasks:  </p>
+<blockquote>
+<p>- name: run show commands<br>
+telnet:  </p>
+<blockquote>
+<p>login_prompt: "Password: "<br>
+password: cisco<br>
+prompts:  </p>
+<blockquote>
+<p>- "[&gt;#]"  </p>
+</blockquote>
+<p>command:  </p>
+<blockquote>
+<p>- terminal length 0<br>
+- show version</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>Выполняем<br>
+<code>ansible-playbook telnet_command_show_ver.yml</code>  </li>
+</ul>
+<p><img alt="результат" src="/images/ansible-wsl-gns.jpg"></p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/dostup-po-telnet-k-routeru-v-gns3-iz-ansible-v-wsl.html">posted at 23:00</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/wsl.html" class="tags">wsl</a>
+                    &nbsp;<a href="/tag/ansible.html" class="tags">ansible</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

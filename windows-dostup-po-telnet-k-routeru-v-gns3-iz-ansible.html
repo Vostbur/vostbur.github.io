@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="russian">
 <head>
-    <meta charset="utf-8" />
+        <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Little things | articles tagged "wsl"</title>
+    <title>Little things | Windows: доступ по telnet к роутеру в GNS3 из Ansible</title>
     <link rel="shortcut icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
@@ -11,12 +11,13 @@
     <meta name="generator" content="Pelican" />
     <meta name="description" content="" />
     <meta name="author" content="Vostbur" />
+
+    <meta name="keywords" content="wsl,ansible" />
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li class="ephemeral selected"><a href="/tag/wsl.html">wsl</a></li>
                 <li><a href="/">Home</a></li>
                 <li><a href="https://github.com/vostbur">GitHub</a></li>
                 <li><a href="/tags">Tags</a></li>
@@ -97,86 +98,10 @@ prompts:  </p>
                     <a href="/windows-dostup-po-telnet-k-routeru-v-gns3-iz-ansible.html">posted at 23:00</a>
                     &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
                     &nbsp;&middot;
-                    &nbsp;<a href="/tag/wsl.html" class="tags selected">wsl</a>
+                    &nbsp;<a href="/tag/wsl.html" class="tags">wsl</a>
                     &nbsp;<a href="/tag/ansible.html" class="tags">ansible</a>
                 </div>
-            </article>            <h4 class="date">мар 30, 2020</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="/zapusk-graficheskogo-interfeisa-ubuntu-v-podsisteme-windows-dlia-linux-wsl.html" rel="bookmark" title="Permanent Link to &quot;Запуск графического интерфейса Ubuntu в подсистеме Windows для Linux (WSL)&quot;">Запуск графического интерфейса Ubuntu в подсистеме Windows для Linux (WSL)</a>
-                </h2>
-
-                
-                
-
-                <p>Как поставить Ubuntu в WSL написано <a href="https://docs.microsoft.com/ru-ru/windows/wsl/install-win10">здесь</a>.  </p>
-<p><strong>В Windows</strong><br>
-1. Ставим <a href="https://sourceforge.net/projects/vcxsrv/">VcXsrv Windows X Server</a>.<br>
-2. Запускаем вручную или создаем конфиг для запуска - файл <em>config.xlaunch</em>:  </p>
-<blockquote>
-<p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br>
-&lt;XLaunch<br>
-WindowMode="Nodecoration"<br>
-ClientMode="NoClient"<br>
-LocalClient="False"<br>
-Display="0"<br>
-LocalProgram="xcalc"<br>
-RemoteProgram="xterm"<br>
-RemotePassword=""<br>
-PrivateKey=""<br>
-RemoteHost=""<br>
-RemoteUser=""<br>
-XDMCPHost=""<br>
-XDMCPBroadcast="False"<br>
-XDMCPIndirect="False"<br>
-Clipboard="True"<br>
-ClipboardPrimary="True"<br>
-ExtraParams=""<br>
-Wgl="True"<br>
-DisableAC="False"<br>
-XDMCPTerminate="False"<br>
-/&gt;  </p>
-</blockquote>
-<p><strong>В Ubuntu</strong>  </p>
-<p><code>sudo apt update &amp;&amp; sudo apt dist-upgrade</code>  </p>
-<p><em>Для Xfce4 (минимум):</em><br>
-<code>sudo apt install -y xfce4-session xfce4-notifyd xfce4-appfinder xfce4-panel</code><br>
-<code>sudo apt install -y xfce4-quicklauncher-plugin xfce4-whiskermenu-plugin</code><br>
-<code>sudo apt install -y xfce4-xkb-plugin xfce4-settings xfce4-terminal xfce4-taskmanager</code><br>
-<code>sudo apt install -y mousepad</code>  </p>
-<p><em>Для GNOME:</em><br>
-<code>sudo apt install -y ubuntu-desktop</code>  </p>
-<p>Затем<br>
-<code>sudo service dbus start</code><br>
-<code>sudo service x11-common start</code>  </p>
-<p>Локализация<br>
-<code>sudo locale-gen ru_RU</code><br>
-<code>sudo locale-gen ru_RU.UTF-8</code><br>
-<code>sudo update-locale</code>  </p>
-<p>Создаем start-desktop.sh  </p>
-<p><em>Для Xfce4:</em><br>
-<code>DISPLAY=:0 LANG=ru_RU.UTF-8 su alex -c xfce4-session</code>  </p>
-<p><em>Для GNOME:</em><br>
-<code>gnome-shell --x11 -r</code>  </p>
-<p>Делаем исполняемым<br>
-<code>chmod u+x start-desktop.sh</code>  </p>
-<h4>Последовательность:</h4>
-<ol>
-<li>Запускаем <em>config.xlaunch</em></li>
-<li>Выполняем в Linux <em>./start-desktop.sh</em></li>
-</ol>
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="/zapusk-graficheskogo-interfeisa-ubuntu-v-podsisteme-windows-dlia-linux-wsl.html">posted at 20:05</a>
-                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="/tag/wsl.html" class="tags">WSL</a>
-                    &nbsp;<a href="/tag/linux.html" class="tags">linux</a>
-                </div>
             </article>
-
             <div class="clear"></div>
             <footer>
                 <p>

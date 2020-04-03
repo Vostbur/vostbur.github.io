@@ -29,7 +29,77 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">апр 02, 2020</h4>
+        <div id="content">            <h4 class="date">апр 03, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/windows-dostup-po-telnet-k-routeru-v-gns3-iz-ansible.html" rel="bookmark" title="Permanent Link to &quot;Windows: доступ по telnet к роутеру в GNS3 из Ansible&quot;">Windows: доступ по telnet к роутеру в GNS3 из Ansible</a>
+                </h2>
+
+                
+                
+
+                <p>В Windows запущен GNS3 с роутером, доступным по telnet (<em>ip 192.168.2.2</em>), установлена Ubuntu в WSL. Как управлять роутером через Ansible?</p>
+<ul>
+<li>
+<p>Ставим Ansible<br>
+<code>sudo apt install ansible</code>  </p>
+</li>
+<li>
+<p>Создаем файлы в домашнем каталоге  </p>
+</li>
+</ul>
+<p><strong>myhosts</strong>  </p>
+<blockquote>
+<p>[cisco-routers]<br>
+192.168.2.2  </p>
+</blockquote>
+<p><strong>ansible.cfg</strong>  </p>
+<blockquote>
+<p>[defaults]<br>
+inventory = ./myhosts<br>
+gathering = explicit</p>
+</blockquote>
+<p><strong>telnet_command_show_ver.yml</strong><br>
+<em>(логин без ввода имени пользователя)</em></p>
+<blockquote>
+<p>---<br>
+- name: Run show command on routers<br>
+hosts: cisco-routers<br>
+tasks:  </p>
+<blockquote>
+<p>- name: run show commands<br>
+telnet:  </p>
+<blockquote>
+<p>login_prompt: "Password: "<br>
+password: cisco<br>
+prompts:  </p>
+<blockquote>
+<p>- "[&gt;#]"  </p>
+</blockquote>
+<p>command:  </p>
+<blockquote>
+<p>- terminal length 0<br>
+- show version</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<ul>
+<li>Выполняем<br>
+<code>ansible-playbook telnet_command_show_ver.yml</code>  </li>
+</ul>
+<p><img alt="результат" src="/images/ansible-wsl-gns.jpg"></p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/windows-dostup-po-telnet-k-routeru-v-gns3-iz-ansible.html">posted at 23:00</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/wsl.html" class="tags">wsl</a>
+                    &nbsp;<a href="/tag/ansible.html" class="tags">ansible</a>
+                </div>
+            </article>            <h4 class="date">апр 02, 2020</h4>
 
             <article class="post">
                 <h2 class="title">
