@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="russian">
+<head>
+        <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Little things | Подключение к устаревшим Cisco по SSH</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Vostbur" />
+
+    <meta name="keywords" content="network,cisco,linux,SSH" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://github.com/vostbur">GitHub</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><a href="/categories">Categories</a></li>
+                <li><a href="/archives">Archives</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="/">Little things</a></h1>
+            <h2>A personal blog.</h2>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">апр 04, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/podkliuchenie-k-ustarevshim-cisco-po-ssh.html" rel="bookmark" title="Permanent Link to &quot;Подключение к устаревшим Cisco по SSH&quot;">Подключение к устаревшим Cisco по SSH</a>
+                </h2>
+
+                
+                
+
+                <p>Если при попытке подключиться выдает что-то похожее на "no matching key exchange method found":  </p>
+<p><em>На Cisco (ip 192.168.2.2)</em>:<br>
+- длина ключа RSA должна быть больше 1024<br>
+- создаем учетную запись пользователя (здесь - cisco)  </p>
+<p><em>В Ubuntu</em>:<br>
+- создаем ~/.ssh/config  </p>
+<blockquote>
+<p>Host 192.168.2.2  </p>
+<blockquote>
+<p>KexAlgorithms +diffie-hellman-group1-sha1<br>
+Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc  </p>
+</blockquote>
+</blockquote>
+<p>Алгоритмы могут быть другие, подходящие будут указаны в сообщении об ошибке.<br>
+- проверяем<br>
+<code>ssh 192.168.2.2 -l cisco</code>  </p>
+<p>Еще почитать <a href="https://4admin.info/legacy-ssh-device/">здесь</a>.</p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/podkliuchenie-k-ustarevshim-cisco-po-ssh.html">posted at 22:20</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/network.html" class="tags">network</a>
+                    &nbsp;<a href="/tag/cisco.html" class="tags">cisco</a>
+                    &nbsp;<a href="/tag/linux.html" class="tags">linux</a>
+                    &nbsp;<a href="/tag/ssh.html" class="tags">SSH</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

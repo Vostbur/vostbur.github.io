@@ -33,6 +33,44 @@
 
             <article class="post">
                 <h2 class="title">
+                    <a href="/podkliuchenie-k-ustarevshim-cisco-po-ssh.html" rel="bookmark" title="Permanent Link to &quot;Подключение к устаревшим Cisco по SSH&quot;">Подключение к устаревшим Cisco по SSH</a>
+                </h2>
+
+                
+                
+
+                <p>Если при попытке подключиться выдает что-то похожее на "no matching key exchange method found":  </p>
+<p><em>На Cisco (ip 192.168.2.2)</em>:<br>
+- длина ключа RSA должна быть больше 1024<br>
+- создаем учетную запись пользователя (здесь - cisco)  </p>
+<p><em>В Ubuntu</em>:<br>
+- создаем ~/.ssh/config  </p>
+<blockquote>
+<p>Host 192.168.2.2  </p>
+<blockquote>
+<p>KexAlgorithms +diffie-hellman-group1-sha1<br>
+Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc  </p>
+</blockquote>
+</blockquote>
+<p>Алгоритмы могут быть другие, подходящие будут указаны в сообщении об ошибке.<br>
+- проверяем<br>
+<code>ssh 192.168.2.2 -l cisco</code>  </p>
+<p>Еще почитать <a href="https://4admin.info/legacy-ssh-device/">здесь</a>.</p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/podkliuchenie-k-ustarevshim-cisco-po-ssh.html">posted at 22:20</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/network.html" class="tags">network</a>
+                    &nbsp;<a href="/tag/cisco.html" class="tags">cisco</a>
+                    &nbsp;<a href="/tag/linux.html" class="tags">linux</a>
+                    &nbsp;<a href="/tag/ssh.html" class="tags">SSH</a>
+                </div>
+            </article>            <h4 class="date">апр 04, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
                     <a href="/nachalnoe-konfigurirovanie-routera-cisco-ispolzuiu-v-gns3.html" rel="bookmark" title="Permanent Link to &quot;Начальное конфигурирование роутера Cisco (использую в GNS3)&quot;">Начальное конфигурирование роутера Cisco (использую в GNS3)</a>
                 </h2>
 
@@ -77,7 +115,7 @@
 <code>R1(config-if)#exit</code>  </p>
 <p>DNS-сервер<br>
 <code>R1(config)#ip name-server 192.168.2.1</code>  </p>
-<p>Создать пользователя с максимальными привилегиями (если надо, чтобы запрашивался пароль на enable, вместо 15 ставить 1 <br>
+<p>Создать пользователя с максимальными привилегиями (если надо, чтобы запрашивался пароль на enable, вместо 15 ставить 1) <br>
 <code>R1(config)#username cisco privilege 15 secret cisco</code>  </p>
 <p>Теперь роутер доступен по telnet, если это достаточно, перейти к сохранению конфигурации  </p>
 <p><strong>Настроить доступ по SSH</strong>  </p>
