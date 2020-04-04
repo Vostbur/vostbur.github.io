@@ -31,7 +31,93 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">апр 03, 2020</h4>
+        <div id="content">            <h4 class="date">апр 04, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/nachalnoe-konfigurirovanie-routera-cisco-ispolzuiu-v-gns3.html" rel="bookmark" title="Permanent Link to &quot;Начальное конфигурирование роутера Cisco (использую в GNS3)&quot;">Начальное конфигурирование роутера Cisco (использую в GNS3)</a>
+                </h2>
+
+                
+                
+
+                <p>Если осталась старая конфигурация, удалить и перезапустить<br>
+<code>Cisco&gt;enable</code><br>
+<code>Cisco#erase startup-config</code><br>
+<code>Cisco#reload</code><br>
+<code>Cisco&gt;enable</code>  </p>
+<p>Новая конфигурация<br>
+<code>Cisco#configure terminal</code>  </p>
+<p>Назвать роутер<br>
+<code>Cisco(config)#hostname R1</code>  </p>
+<p>Хранить пароли в файле конфигурации в зашифрованном виде<br>
+<code>R1(config)#service password-encryption</code>  </p>
+<p>Отключить управление по http, https, CDP<br>
+<code>R1(config)#no ip http server</code><br>
+<code>R1(config)#no ip http secure-server</code><br>
+<code>R1(config)#no cdp run</code>  </p>
+<p>Пароль на подключение по консольному порту<br>
+<code>R1(config)#line console 0</code><br>
+<code>R1(config-line)#password cisco</code><br>
+<code>R1(config-line)#login local</code><br>
+<code>R1(config-line)#exit</code>  </p>
+<p>Сколько доступно виртуальных терминалов?<br>
+<code>R1(config)#line vty ?</code><br>
+<code>&lt;0-903&gt;  First Line number</code>  </p>
+<p>Пароль на подключение по telnet<br>
+<code>R1(config)#line vty 0 903</code><br>
+<code>R1(config-line)#password cisco</code><br>
+<code>R1(config-line)#login local</code><br>
+<code>R1(config-line)#exit</code>  </p>
+<p>Пароль на вход в режим enable<br>
+<code>R1(config)#enable secret cisco</code>  </p>
+<p>Настроить интерфейс внутренней сети<br>
+<code>R1(config)#interface FastEthernet 0/0</code><br>
+<code>R1(config-if)#ip address 192.168.2.2 255.255.255.0</code><br>
+<code>R1(config-if)#description LAN</code><br>
+<code>R1(config-if)#no shutdown</code><br>
+<code>R1(config-if)#exit</code>  </p>
+<p>DNS-сервер<br>
+<code>R1(config)#ip name-server 192.168.2.1</code>  </p>
+<p>Создать пользователя с максимальными привилегиями (если надо, чтобы запрашивался пароль на enable, вместо 15 ставить 1 <br>
+<code>R1(config)#username cisco privilege 15 secret cisco</code>  </p>
+<p>Теперь роутер доступен по telnet, если это достаточно, перейти к сохранению конфигурации  </p>
+<p><strong>Настроить доступ по SSH</strong>  </p>
+<p>Проверить и установить точное время<br>
+<code>R1(config)#do sh clock</code><br>
+<code>*00:19:58.371 UTC Fri Mar 1 2002</code><br>
+<code>R1(config)#do clock set 10:41:00 04 Apr 2020</code>  </p>
+<p>Указать имя домена (любое)<br>
+<code>R1(config)#ip domain name site.info</code>  </p>
+<p>Генерировать ключ RSA, длину ключа ставить <strong>не меньше 1024</strong><br>
+<code>R1(config)#crypto key generate rsa</code>  </p>
+<p>Включить SSH v.2 (с версии IOS 12.1(19)E)<br>
+<code>R1(config)#ip ssh version 2</code>  </p>
+<p>Включить доступ по SSH на всех виртуальных терминалах<br>
+<code>R1(config)#line vty 0 903</code><br>
+<code>R1(config-line)#transport input ssh</code>  </p>
+<p>Режим вывод сообщений в консоль, не мешающий вводу команд<br>
+<code>R1(config-line)#logging synchronous</code>  </p>
+<p>Тайм-аут до автоматического закрытия SSH-сессии<br>
+<code>R1(config-line)#exec-timeout 60 0</code><br>
+<code>R1(config-line)#exit</code>  </p>
+<p>Оставить возможность доступа по telnet, если не надо, эту секцию пропустить<br>
+<code>R1(config)#line vty 0 4</code><br>
+<code>R1(config-line)#transport input telnet</code><br>
+<code>R1(config-line)#exit</code>  </p>
+<p>Сохранить конфигурацию<br>
+<code>R1(config)#end</code><br>
+<code>R1#copy running-config startup-config</code>  </p>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/nachalnoe-konfigurirovanie-routera-cisco-ispolzuiu-v-gns3.html">posted at 13:30</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/memorizy.html" rel="tag">Меморизы</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/network.html" class="tags">network</a>
+                    &nbsp;<a href="/tag/cisco.html" class="tags">cisco</a>
+                </div>
+            </article>            <h4 class="date">апр 03, 2020</h4>
 
             <article class="post">
                 <h2 class="title">
