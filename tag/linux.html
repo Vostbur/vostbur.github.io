@@ -56,6 +56,11 @@ Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc  </p>
 <p>Алгоритмы могут быть другие, подходящие будут указаны в сообщении об ошибке.<br>
 - проверяем<br>
 <code>ssh 192.168.2.2 -l cisco</code>  </p>
+<p>При подключении к роутеру в GNS3 иногда получаю ошибку <em>'connection refused'</em>. Помогает генерировать заново ключ:<br>
+<code>crypto key generate rsa general-keys modulus 1024</code><br>
+В Ubuntu удаляю запись о старом ключе<br>
+<code>ssh-keygen -f "~/.ssh/known_hosts" -R "192.168.2.2"</code><br>
+и пробую поключиться  </p>
 <p>Еще почитать <a href="https://4admin.info/legacy-ssh-device/">здесь</a>.</p>
                 <div class="clear"></div>
 
