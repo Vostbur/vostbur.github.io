@@ -31,7 +31,32 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">апр 05, 2020</h4>
+        <div id="content">            <h4 class="date">апр 06, 2020</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/6-aprelia-2020-g.html" rel="bookmark" title="Permanent Link to &quot;6 апреля 2020 г.&quot;">6 апреля 2020 г.</a>
+                </h2>
+
+                
+                
+
+                <ul>
+<li><a href="https://natenka.github.io/cisco-ios/">Статья</a> о возможностях команд Cisco IOS упрощающих работу.</li>
+<li>Отличный youtube-канал Дмитрия Фиголя. Начал смотреть с <a href="https://www.youtube.com/watch?v=MLeiShwb7Qo">YAML, Python netmiko and async SSH – Network programmability stream 1</a>.</li>
+<li>В <a href="https://code.visualstudio.com/">Visual Studio Code</a> есть поддержка переключения в окружение WSL. Программируешь в Windows, выполняешь в Linux.</li>
+</ul>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/6-aprelia-2020-g.html">posted at 11:50</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/kratko.html" rel="tag">Кратко</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/network.html" class="tags">network</a>
+                    &nbsp;<a href="/tag/cisco.html" class="tags">cisco</a>
+                    &nbsp;<a href="/tag/vsc.html" class="tags">VSC</a>
+                </div>
+            </article>            <h4 class="date">апр 05, 2020</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -183,18 +208,16 @@ Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc  </p>
 <code>R1(config)#ip ssh version 2</code>  </p>
 <p>Включить доступ по SSH на всех виртуальных терминалах<br>
 <code>R1(config)#line vty 0 903</code><br>
-<code>R1(config-line)#transport input ssh</code>  </p>
+<code>R1(config-line)#transport input ssh</code><br>
+Если нужен и telnet<br>
+<code>R1(config-line)#transport input ssh telnet</code> 
+Или<br>
+<code>R1(config-line)#transport input all</code>   </p>
 <p>Режим вывод сообщений в консоль, не мешающий вводу команд<br>
 <code>R1(config-line)#logging synchronous</code>  </p>
 <p>Тайм-аут до автоматического закрытия SSH-сессии, если надо отключить <code>exec-timeout 0 0</code><br>
 <code>R1(config-line)#exec-timeout 60 0</code><br>
 <code>R1(config-line)#exit</code>  </p>
-<p>Оставить возможность доступа по telnet. Если не надо, эту секцию пропустить<br>
-<code>R1(config)#line vty 0 4</code><br>
-<code>R1(config-line)#transport input telnet</code><br>
-Или<br>
-<code>R1(config-line)#transport input all</code> </p>
-<p><code>R1(config-line)#exit</code>  </p>
 <p>Сохранить конфигурацию<br>
 <code>R1(config)#end</code><br>
 <code>R1#copy running-config startup-config</code>  </p>
@@ -519,30 +542,16 @@ XDMCPTerminate="False"<br>
                     &nbsp;<a href="/tag/github.html" class="tags">github</a>
                     &nbsp;<a href="/tag/pelican.html" class="tags">pelican</a>
                 </div>
-            </article>            <h4 class="date">мар 29, 2020</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="/29-marta-2020-g.html" rel="bookmark" title="Permanent Link to &quot;29 марта 2020 г.&quot;">29 марта 2020 г.</a>
-                </h2>
-
-                
-                
-
-                <ul>
-<li>В Ubuntu под WSL запустил GNOME и Xfce4.</li>
-<li>Выложил на GitHub проект <a href="https://github.com/Vostbur/Task-Manager">Task Manager</a>. Очень простой трекер задач для командной работы над проектами.</li>
-<li>Отличный CLI для SQLite <a href="https://github.com/dbcli/litecli">litecli</a> с подсветкой, подсказками и автодополнением.</li>
-</ul>
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="/29-marta-2020-g.html">posted at 20:00</a>
-                    &nbsp;&middot;&nbsp;<a href="/category/kratko.html" rel="tag">Кратко</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="/tag/python.html" class="tags">python</a>
-                </div>
             </article>
+
+                <div class="clear"></div>
+                <div class="pages">
+
+
+                    <a href="/author/vostbur/page/2/" class="next_page">Next&nbsp;&rarr;</a>
+
+                    <span>Page 1 of 2</span>
+                </div>
 
             <div class="clear"></div>
             <footer>

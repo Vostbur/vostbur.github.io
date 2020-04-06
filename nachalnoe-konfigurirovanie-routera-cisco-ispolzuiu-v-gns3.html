@@ -97,18 +97,16 @@
 <code>R1(config)#ip ssh version 2</code>  </p>
 <p>Включить доступ по SSH на всех виртуальных терминалах<br>
 <code>R1(config)#line vty 0 903</code><br>
-<code>R1(config-line)#transport input ssh</code>  </p>
+<code>R1(config-line)#transport input ssh</code><br>
+Если нужен и telnet<br>
+<code>R1(config-line)#transport input ssh telnet</code> 
+Или<br>
+<code>R1(config-line)#transport input all</code>   </p>
 <p>Режим вывод сообщений в консоль, не мешающий вводу команд<br>
 <code>R1(config-line)#logging synchronous</code>  </p>
 <p>Тайм-аут до автоматического закрытия SSH-сессии, если надо отключить <code>exec-timeout 0 0</code><br>
 <code>R1(config-line)#exec-timeout 60 0</code><br>
 <code>R1(config-line)#exit</code>  </p>
-<p>Оставить возможность доступа по telnet. Если не надо, эту секцию пропустить<br>
-<code>R1(config)#line vty 0 4</code><br>
-<code>R1(config-line)#transport input telnet</code><br>
-Или<br>
-<code>R1(config-line)#transport input all</code> </p>
-<p><code>R1(config-line)#exit</code>  </p>
 <p>Сохранить конфигурацию<br>
 <code>R1(config)#end</code><br>
 <code>R1#copy running-config startup-config</code>  </p>
