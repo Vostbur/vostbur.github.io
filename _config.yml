@@ -65,4 +65,4 @@ sass:
   compressed: true
 
 # Gems
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
