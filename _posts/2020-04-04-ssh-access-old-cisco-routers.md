@@ -24,7 +24,7 @@ _В Ubuntu_:
 При подключении к роутеру в GNS3 иногда получаю ошибку _'connection refused'_. Помогает генерировать заново ключ:  
 `crypto key generate rsa general-keys modulus 1024`  
 В Ubuntu удаляю запись о старом ключе  
-`ssh-keygen -f "~/.ssh/known_hosts" -R "192.168.2.2"`  
+`ssh-keygen -f ~/.ssh/known_hosts -R "192.168.2.2"`  
 и пробую поключиться  
 
 Еще почитать [здесь](https://4admin.info/legacy-ssh-device/).
