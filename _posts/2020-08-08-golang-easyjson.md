@@ -33,7 +33,9 @@ title: 8 августа 2020 г.
     }
     ```
 4. Генерируем код для *easyjson*
+
    `%GOPATH%\project\model>%GOPATH%\bin\easyjson.exe -all model.go`
+   
    в итоге в пакете *model* появляется файл с программным кодом *model_easyjson.go*
 
 5. Импортируем пакет с моделью и сгенерированным кодом и   пользуемся
@@ -52,7 +54,9 @@ title: 8 августа 2020 г.
 
 ### Benchmark
 Сравнение со стандартным *encoding/json* на реальном проекте
+
 `%GOPATH%\project> go test -bench . -benchmem`
+
 ```
 BenchmarkJSON-8                  247           4808229 ns/op         1577438 B/op     10546 allocs/op
 BenchmarkEASYJSON-8              550           2148149 ns/op         1385620 B/op      8226 allocs/op
