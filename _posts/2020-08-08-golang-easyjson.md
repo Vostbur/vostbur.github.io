@@ -24,7 +24,7 @@ title: 8 августа 2020 г.
 3. В каталоге нашего проекта создаем подкаталог, он же пакет go, отличный от main (это обязательно), например
     `%GOPATH%\project\model`
 
-    и создаем файл *model.go* с нашей моделью, например
+    и создаем файл *model.go* с нашей моделью
     ```
     package model
 
@@ -54,6 +54,6 @@ title: 8 августа 2020 г.
 Сравнение со стандартным *encoding/json* на реальном проекте
 `%GOPATH%\project> go test -bench . -benchmem`
 ```
-BenchmarkJSON-8                      247           4808229 ns/op         1577438 B/op     10546 allocs/op
+BenchmarkJSON-8                  247           4808229 ns/op         1577438 B/op     10546 allocs/op
 BenchmarkEASYJSON-8              550           2148149 ns/op         1385620 B/op      8226 allocs/op
 ```
