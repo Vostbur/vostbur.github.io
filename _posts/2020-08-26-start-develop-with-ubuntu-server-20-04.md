@@ -45,3 +45,9 @@ source .venv/bin/activate
 pip install -U pip setuptools
 deactivate
 ```
+
+Pyenv
+=====
+
+[Management of multiple versions of Python with pyenv](https://vostbur.github.io/pyenv/)
+
