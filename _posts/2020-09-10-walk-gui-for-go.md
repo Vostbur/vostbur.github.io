@@ -10,6 +10,7 @@ I haven't figured out everything I need. For example, I had to change some sourc
 For simple Win GUI applications, I think this library is the best choice.
 
 Here's what I got
+
 ![](/images/go-walk-watchdog.PNG)
 
 The source code and instructions for compilation are [here](https://github.com/Vostbur/whatchange).
