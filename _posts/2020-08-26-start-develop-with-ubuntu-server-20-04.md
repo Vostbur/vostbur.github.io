@@ -51,3 +51,37 @@ Pyenv
 
 [Management of multiple versions of Python with pyenv](https://vostbur.github.io/pyenv/)
 
+Poetry
+======
+
+Install poetry
+
+`pip3 install poetry`
+
+Set virtualenv folder in project dir
+
+`poetry config virtualenvs.in-project true`
+
+Make new project
+
+`mkdir testproject && cd testproject`
+
+`poetry init`
+
+or
+
+`poetry new testproject`
+
+add project dependencies and deps needed for development
+
+`poetry add requests`
+
+`poetry add --dev ipdb flake8 mypy black`
+
+Show the installed dependencies
+
+`poetry show`
+
+Run virtualnv with installed dependencies
+
+`poetry shell`
