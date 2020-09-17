@@ -85,3 +85,18 @@ Show the installed dependencies
 Run virtualnv with installed dependencies
 
 `poetry shell`
+
+Poetry is a good addition for pyenv.
+My workflow:
+
+```
+mkdir testproject && cd testproject
+pyenv versions
+pyenv local 3.8.5
+poetry init
+poetry add termtosvg
+poetry shell
+termtosvg
+```
+
+By the way. Look at [termtosvg](https://github.com/nbedos/termtosvg). This is a good script for capturing terminal output and writing it to an svg file.
