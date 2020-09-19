@@ -97,9 +97,3 @@ EOF
 Checking
 
 ![](/images/test_ansible_docker_ubuntu.svg)
-```
-ansible -m ping all
-ansible -m shell -a 'hostname' all
-ansible -m shell -a 'df -h' all
-ansible -m shell -a 'whoami' all
-```
