@@ -57,7 +57,7 @@ b08de187afa7        server_one          "/usr/sbin/sshd -D"   27 minutes ago    
 Find out the ip address of the new containers and try ssh with the root password (from the configuration)
 
 ```
-docker inspect -f "{{ .NetworkSettings.IPAddress }}" server_one
+docker inspect -f "\{\{ .NetworkSettings.IPAddress \}\}" server_one
 docker inspect -f "{{ .NetworkSettings.IPAddress }}" server_two
 ssh root@172.17.0.2
 ssh root@172.17.0.3
