@@ -24,7 +24,7 @@ ajaxify_contact_form: true
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname: "disqus_xxx"
+# disqus_shortname: "disqus_xxx"
 
 # Social icons
 github_username: Vostbur
