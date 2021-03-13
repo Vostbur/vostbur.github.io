@@ -4,11 +4,11 @@ title: Manage Docker without sudo and clean up used disk space
 ---
 
 Manage Docker without sudo
-==========================
+--------------------------
 
 There are official [guidelines](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user) for managing Docker as a non-root user.
 
-Summary
+Summary:
 
 add user to `docker` group
 
@@ -29,7 +29,7 @@ $ newgrp docker
 The main thing for me is that I can now use the VSCode plugin for docker on Linux.
 
 Clearing the disk space used by Docker
-======================================
+--------------------------------------
 
 To find out how much space is being used by the docker
 
