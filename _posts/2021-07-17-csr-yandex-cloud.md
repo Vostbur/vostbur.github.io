@@ -7,7 +7,7 @@ In Yandex.Cloud, you can deploy a Cisco Cloud Services Router (CSR) 1000v virtua
 
 There is an awesome manual at this [link](https://cloud.yandex.ru/docs/solutions/routing/cisco) to Yandex docs.
 
-For my experiments, I ran two instances of CSR1000v. I have configured a connection to one of them using SSH. Both of them are inerconnected by a local network.
+For my experiments, I ran two instances of CSR1000v. I have configured a connection to one of them using SSH. Both of them are interconnected by a local network.
 
 ![](/images/csr-yandex-cloud.PNG)
 
