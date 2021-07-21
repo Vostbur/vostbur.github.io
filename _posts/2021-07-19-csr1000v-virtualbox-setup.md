@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Запуск CSR1000v в VirtualBox (Windows)
+title: Запуск CSR1000v в VirtualBox (Windows) с эмуляцией serial port
 ---
 
-*Я расскажу как подготовить и запустить виртуальный маршрутизатор Cisco - Cloud Services Router (СSR1000v) в VirtualBox под Windows, настроить доступ по telnet, ssh и написать скрипт на python для автоматизации конфигурирования.*
+*Я расскажу как подготовить и запустить виртуальный маршрутизатор Cisco - Cloud Services Router (СSR1000v) в VirtualBox под Windows с эмуляцией serial port, настроить доступ по telnet, ssh и написать скрипт на python для автоматизации конфигурирования.*
 
 ## Необходимый софт
 
