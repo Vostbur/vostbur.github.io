@@ -3,11 +3,11 @@ layout: post
 title: Запуск CSR1000v в VirtualBox и VMware
 ---
 
-*В [прошлой статье](https://vostbur.github.io/csr1000v-virtualbox-setup/) я рассказал как подготовить и запустить любую версию виртуального маршрутизатора Cisco - Cloud Services Router (СSR1000v) в VirtualBox под Windows. С версии Cisco IOS XE 3.13S можно обойтись без настройки последовательного интерфейса. Запускать будем всё тот же релиз 3.15.0S, который доступен для скачивания с официального сайта.*
+*В [прошлой статье](https://vostbur.github.io/csr1000v-virtualbox-setup/) я рассказал как подготовить и запустить любую версию виртуального маршрутизатора Cisco - Cloud Services Router (СSR1000v) в VirtualBox под Windows. С версии Cisco IOS XE 3.13S можно обойтись без настройки последовательного интерфейса. Запускать будем всё тот же релиз 3.15.0S. С [официального сайта](https://software.cisco.com/download/home/284364978/type/282046477/release/3.15.0S) нужно скачать файлы **csr1000v-universalk9.03.15.00.S.155-2.S-std.iso** и **csr1000v-universalk9.03.15.00.S.155-2.S-std.ova** По-моему, сейчас это самая поздняя версия CSR, доступная с аккаунтом Cisco, версии новее требуют различные партнерские отношения с Cisco. Зарегистрироваться можно [по адресу](https://id.cisco.com/signin/register).*
 
 ## VirtualBox
 
-Запустите VirtualBox и импортируйте конфигурацию виртуальной машины из OVI-файла. Как и в прошлой статье в настройках SCSI-контроллера виртуальной машины подключите iso-образ дистрибутива CSR и стартуйте машину. Выберите пункт *"Auto Console"* (если ничего не делать, через 10 секунд начнется загрузка в этом режиме). Долго ждем когда закончится установка и машина один раз сама перегрузится.
+Запустите [VirtualBox](https://www.virtualbox.org/) и импортируйте конфигурацию виртуальной машины из OVI-файла. Как и в прошлой статье в настройках SCSI-контроллера виртуальной машины подключите iso-образ дистрибутива CSR и стартуйте машину. Выберите пункт *"Auto Console"* (если ничего не делать, через 10 секунд начнется загрузка в этом режиме). Долго ждем когда закончится установка и машина один раз сама перегрузится.
 
 Cisco CSR 1000v свяжет реальные интерфесы хоста с виртуальными сетевыми картами (vNIC). Посмотреть можно командой
     
@@ -48,7 +48,7 @@ Wi-fi-роутер подключен к internet, можно указать dns
 
 ## VMware Workstation Player 
 
-Для запуска в VMware достаточно так же импортировать конфигурацию из ovi-файла и запустить. Но я попробовал настроил свою конфигурацию.
+Для запуска в [VMware](https://www.vmware.com/ru/products/workstation-player/workstation-player-evaluation.html) достаточно так же импортировать конфигурацию из ovi-файла и запустить. Но я попробовал настроил свою конфигурацию (я пользуюсь VMware Workstation 15 Player, уже вышел VMware Workstation 16 Player).
 
 - CPU 4 (минимум 1), memory 4 Gb (минимум 4 Gb), удалил звук, подключил iso-образ
 
@@ -72,4 +72,7 @@ CSR под VMware работает существенно быстрее. Заг
 ### Links:
 
 - [1] [Официальный сайт Cisco с образами IOS](https://software.cisco.com/download/home/284364978/type/282046477/release/3.15.0S)
-- [2] [Cisco CSR 1000v and Cisco ISRv Software Configuration Guide](https://www.cisco.com/c/en/us/td/docs/routers/csr1000/software/configuration/b_CSR1000v_Configuration_Guide.html)
+- [2] [Страница регистрации аккаунта Cisco](https://id.cisco.com/signin/register)
+- [3] [Oracle VM VirtualBox](https://www.virtualbox.org/)
+- [4] [VMware Workstation 16 Player](https://www.vmware.com/ru/products/workstation-player/workstation-player-evaluation.html)
+- [5] [Cisco CSR 1000v and Cisco ISRv Software Configuration Guide](https://www.cisco.com/c/en/us/td/docs/routers/csr1000/software/configuration/b_CSR1000v_Configuration_Guide.html)
