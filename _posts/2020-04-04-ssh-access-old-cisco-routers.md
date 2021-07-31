@@ -27,4 +27,40 @@ _В Ubuntu_:
 `ssh-keygen -f ~/.ssh/known_hosts -R "192.168.2.2"`  
 и пробую поключиться  
 
+_То же самое но для CLI в одну строку_
+
+Пробуем
+
+```
+$ ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 user@host
+```
+
+Но потом мы можем получить следующее:
+
+```
+Unable to negotiate with host port 22: no matching cipher found. Their offer: aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+```
+
+Проверим, какие типы шифрования поддерживает наш ssh клиент
+
+```
+$ ssh -Q cipher
+3des-cbc
+aes128-cbc
+aes192-cbc
+aes256-cbc
+rijndael-cbc@lysator.liu.se
+aes128-ctr
+aes192-ctr
+aes256-ctr
+aes128-gcm@openssh.com
+aes256-gcm@openssh.com
+```
+
+Видим, что можем использовать, например, **aes256-cbc**
+
+```
+$ ssh -c aes256-cbc -oKexAlgorithms=+diffie-hellman-group1-sha1 user@host
+```
+
 Еще почитать [здесь](https://4admin.info/legacy-ssh-device/).
