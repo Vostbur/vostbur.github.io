@@ -10,7 +10,7 @@ Especially useful to me is [Cookiecutter Django](https://github.com/pydanny/cook
 ----
 ### Links:
 
-- [1] ["How to Dockerize Django in 5 minutes"](https://justdjango.com/blog/django-docker-tutorial)
+- [1] [How to Dockerize Django in 5 minutes](https://justdjango.com/blog/django-docker-tutorial)
 - [2] [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
 - [3] [Cookiecutter Django](https://github.com/pydanny/cookiecutter-django)
 
