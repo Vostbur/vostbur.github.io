@@ -1,0 +1,21 @@
+baseURL: 'https://vostbur.github.io/'
+languageCode: en-us
+title: Little things about IT
+theme: papermod
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: github.com/Vostbur
+      name: github.com/Vostbur
+      url: https://github.com/Vostbur
+      weight: 30
+params:
+  ShowShareButtons: true
+  env: production
