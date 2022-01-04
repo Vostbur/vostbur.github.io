@@ -62,6 +62,22 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Django REST API with React App step-by-step
+</h2>
+</header>
+<section class=entry-content>
+<p>I use PyCharm for python projects and pipenv for package management.
+Start new PyCharm project named django-rest-react-blog
+Optionally
+git init clone gist .gitignore for Django and React projects
+Main course
+pipenv install django pipenv install djangorestframework pipenv install ipython --dev django-admin.py startproject bookcase cd bookcase python manage.py startapp mainapp Edit bookcase/settings.py: ... INSTALLED_APPS = [ ... 'rest_framework' ] ... TEMPLATES = [ { ... 'DIRS': [BASE_DIR / 'mainapp-ui/build'], ... }, ] ....</p>
+</section>
+<footer class=entry-footer><span title="2021-02-27 00:00:00 +0000 UTC">February 27, 2021</span></footer>
+<a class=entry-link aria-label="post link to Django REST API with React App step-by-step" href=https://vostbur.github.io/posts/dfr-react-step-by-step/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>The backup connection between the two branches
 </h2>
 </header>
@@ -179,20 +195,6 @@ Apart from Tkinter, I only know a little about the GTK. I used it for a new vers
 <footer class=entry-footer><span title="2020-09-05 00:00:00 +0000 UTC">September 5, 2020</span></footer>
 <a class=entry-link aria-label="post link to Watchdog for folder changes with golang" href=https://vostbur.github.io/posts/watchdog-folder-changes-golang/></a>
 </article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Windows GUI-app on Golang with GTK 3
-</h2>
-</header>
-<section class=entry-content>
-<p>To develop a GUI app in Windows, I chose the gotk3 package. This is a binding of the GTK lib, which provides a native interface for Windows.
-I didn’t deal with crosscompiling and installed all the necessary tools in the Windows 10 VM. The VM image is officially distributed by Microsoft.
-I used the instructions from the wiki to install gotk3.
-Also I used the Chocolatey to install the necessary tools....</p>
-</section>
-<footer class=entry-footer><span title="2020-09-01 00:00:00 +0000 UTC">September 1, 2020</span></footer>
-<a class=entry-link aria-label="post link to Windows GUI-app on Golang with GTK 3" href=https://vostbur.github.io/posts/windows-gui-app-golang-gtk/></a>
-</article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=prev href=https://vostbur.github.io/page/2/>« Prev Page</a>
@@ -201,7 +203,7 @@ Also I used the Chocolatey to install the necessary tools....</p>
 </footer>
 </main>
 <footer class=footer>
-<span>&copy; 2021 <a href=https://vostbur.github.io/>Little things about IT</a></span>
+<span>&copy; 2022 <a href=https://vostbur.github.io/>Little things about IT</a></span>
 <span>
 Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
