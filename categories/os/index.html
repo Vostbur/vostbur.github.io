@@ -16,7 +16,7 @@
 <link rel=mask-icon href=https://vostbur.github.io/safari-pinned-tab.svg>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=alternate type=application/rss+xml href=https://vostbur.github.io/categories/os/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
@@ -63,6 +63,19 @@
 <header class=page-header>
 <h1>OS</h1>
 </header>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>Настройка web-сервера на Astra Linux SE 1.5
+</h2>
+</header>
+<section class=entry-content>
+<p>Web-сервер Apache2, входящий в состав Astra Linux SE 1.5 Smolensk, не допускает возможности анонимного использования ресурсов web-сервера и требует обязательной настройки авторизации пользователей.
+Для обеспечения нормальной работы пользователя с сетевыми сервисами должны быть явно заданы диапазоны его мандатных уровней и категорий, даже если ему не доступны уровни и категории выше 0.
+# pdpl-user -z &lt;имя_пользователя> После установки сервера необходимо установить пакет libapache2-mod-auth-pam. После этого сервер настроен и готов к приему запросов на всех сетевых интерфейсах на 80 порту....</p>
+</section>
+<footer class=entry-footer><span title="2022-02-03 00:00:00 +0000 UTC">February 3, 2022</span></footer>
+<a class=entry-link aria-label="post link to Настройка web-сервера на Astra Linux SE 1.5" href=https://vostbur.github.io/posts/apache2-astra-linux-se-15/></a>
+</article>
 <article class="post-entry tag-entry">
 <header class=entry-header>
 <h2>Starting a Synapse/Matrix server on Raspberry Pi

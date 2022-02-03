@@ -15,7 +15,7 @@
 <link rel=mask-icon href=https://vostbur.github.io/safari-pinned-tab.svg>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=alternate type=application/rss+xml href=https://vostbur.github.io/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
@@ -60,6 +60,19 @@
 </nav>
 </header>
 <main class=main>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Watchdog for folder changes with golang
+</h2>
+</header>
+<section class=entry-content>
+<p>I recently wrote a Python script to log changes in the selected folder. The script has a GUI based on Tkinter, the native Python library.
+I decide to rewrite this script in the Golang. I only need one executable file that doesn’t require Python installation. Before that, I made an executable file using pyinstaller. But why not try Golang?
+Apart from Tkinter, I only know a little about the GTK. I used it for a new version of the program written in Golang with a GUI....</p>
+</section>
+<footer class=entry-footer><span title="2020-09-05 00:00:00 +0000 UTC">September 5, 2020</span></footer>
+<a class=entry-link aria-label="post link to Watchdog for folder changes with golang" href=https://vostbur.github.io/posts/watchdog-folder-changes-golang/></a>
+</article>
 <article class=post-entry>
 <header class=entry-header>
 <h2>Windows GUI-app on Golang with GTK 3
@@ -213,25 +226,6 @@ ssh 192.168.2.2 -l cisco При ошибке ‘connection refused’ помог
 </section>
 <footer class=entry-footer><span title="2020-04-04 00:00:00 +0000 UTC">April 4, 2020</span></footer>
 <a class=entry-link aria-label="post link to Подключение к устаревшим Cisco по SSH" href=https://vostbur.github.io/posts/connecting-legacy-cisco-over-ssh/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Управление роутером в GNS3 с Ansible в Windows
-</h2>
-</header>
-<section class=entry-content>
-<p>В Windows запущен GNS3 с роутером, доступным по telnet (ip 192.168.2.2), установлена Ubuntu в WSL. Как управлять роутером через Ansible?
-Ставим Ansible
-sudo apt install ansible
-Создаем файлы в домашнем каталоге
-myhosts
-[cisco-routers] 192.168.2.2 ansible.cfg
-[defaults] inventory = ./myhosts gathering = explicit telnet_command_show_ver.yml
-(логин без ввода имени пользователя)
---- - name: Run show command on routers hosts: cisco-routers tasks: - name: run show commands telnet: login_prompt: "Password: " password: cisco prompts: - "[>#]" command: - terminal length 0 - show version Выполняем...</p>
-</section>
-<footer class=entry-footer><span title="2020-04-03 00:00:00 +0000 UTC">April 3, 2020</span></footer>
-<a class=entry-link aria-label="post link to Управление роутером в GNS3 с Ansible в Windows" href=https://vostbur.github.io/posts/management-gns3-router-with-ansible-in-windows/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

@@ -15,7 +15,7 @@
 <link rel=mask-icon href=https://vostbur.github.io/safari-pinned-tab.svg>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
-<meta name=generator content="Hugo 0.91.2">
+<meta name=generator content="Hugo 0.92.1">
 <link rel=alternate type=application/rss+xml href=https://vostbur.github.io/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
@@ -60,6 +60,25 @@
 </nav>
 </header>
 <main class=main>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Управление роутером в GNS3 с Ansible в Windows
+</h2>
+</header>
+<section class=entry-content>
+<p>В Windows запущен GNS3 с роутером, доступным по telnet (ip 192.168.2.2), установлена Ubuntu в WSL. Как управлять роутером через Ansible?
+Ставим Ansible
+sudo apt install ansible
+Создаем файлы в домашнем каталоге
+myhosts
+[cisco-routers] 192.168.2.2 ansible.cfg
+[defaults] inventory = ./myhosts gathering = explicit telnet_command_show_ver.yml
+(логин без ввода имени пользователя)
+--- - name: Run show command on routers hosts: cisco-routers tasks: - name: run show commands telnet: login_prompt: "Password: " password: cisco prompts: - "[>#]" command: - terminal length 0 - show version Выполняем...</p>
+</section>
+<footer class=entry-footer><span title="2020-04-03 00:00:00 +0000 UTC">April 3, 2020</span></footer>
+<a class=entry-link aria-label="post link to Управление роутером в GNS3 с Ansible в Windows" href=https://vostbur.github.io/posts/management-gns3-router-with-ansible-in-windows/></a>
+</article>
 <article class=post-entry>
 <header class=entry-header>
 <h2>Запуск графического интерфейса в подсистеме Windows для Linux (WSL)
