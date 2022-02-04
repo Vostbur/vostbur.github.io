@@ -66,6 +66,22 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Подключение к устаревшим Cisco по SSH
+</h2>
+</header>
+<section class=entry-content>
+<p>Если при попытке подключиться выдает что-то похожее на “no matching key exchange method found”:
+На Cisco (ip 192.168.2.2):
+длина ключа RSA должна быть больше 1024 создаем учетную запись пользователя (здесь - cisco) В linux:
+создаем ~/.ssh/config Host 192.168.2.2 KexAlgorithms +diffie-hellman-group1-sha1 Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc Алгоритмы могут быть другие, подходящие будут указаны в сообщении об ошибке.
+проверяем
+ssh 192.168.2.2 -l cisco При ошибке ‘connection refused’ помогает создание нового ключа:...</p>
+</section>
+<footer class=entry-footer><span title="2020-04-04 00:00:00 +0000 UTC">April 4, 2020</span></footer>
+<a class=entry-link aria-label="post link to Подключение к устаревшим Cisco по SSH" href=https://vostbur.github.io/posts/connecting-legacy-cisco-over-ssh/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Управление роутером в GNS3 с Ansible в Windows
 </h2>
 </header>

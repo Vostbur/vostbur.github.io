@@ -62,6 +62,21 @@
 <main class=main>
 <article class=first-entry>
 <header class=entry-header>
+<h2>Запуск Django-приложений через mod_python в Astra Linux SE 1.5
+</h2>
+</header>
+<section class=entry-content>
+<p>Считаем, что Apache уже установлен и настроена аутентификация и авторизация через PAM (см. Настройка web-сервера на Astra Linux SE 1.5)
+Устанавливаем необходимые пакеты:
+# apt-get install libapache2-mod-python python-django Включаем модуль:
+# a2enmod python Создаем проект Django и каталог для log-файлов:
+# cd /var/www # django-admin startproject django_site # mkdir django_site/log В /etc/apache2/sites-available/ создаем файл django_site. Это файл конфигурации виртуального хоста для нашего Django-проекта, лежащего в каталоге /var/www/django_site/....</p>
+</section>
+<footer class=entry-footer><span title="2022-02-04 00:00:00 +0000 UTC">February 4, 2022</span></footer>
+<a class=entry-link aria-label="post link to Запуск Django-приложений через mod_python в Astra Linux SE 1.5" href=https://vostbur.github.io/posts/django-starting-astra-linux-se-15/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Настройка web-сервера на Astra Linux SE 1.5
 </h2>
 </header>
@@ -172,18 +187,6 @@ import requests from bs4 import BeautifulSoup url = "https://vostbur.github.io" 
 </section>
 <footer class=entry-footer><span title="2021-07-22 00:00:00 +0000 UTC">July 22, 2021</span></footer>
 <a class=entry-link aria-label="post link to A dynamic GitHub profile with GitHub Actions" href=https://vostbur.github.io/posts/dynamic-github-profile-with-github-actions/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Deploying the django app on the DigitalOcean App Platform
-</h2>
-</header>
-<section class=entry-content>
-<p>For deploying Django apps, I tried PaaS such as Heroku and Pythonanywhere. It’s the turn of the DigitalOcean App Platform. And so far, this is the easiest and fastest way to deploy a Django app in production. There is awesome guide on how to do this on DigitalOcean’s tutorials.
-For testing, I wrote a small application that generates a configuration snippet for configuring ssh on cisco devices. For simplicity, I didn’t use a database and static content....</p>
-</section>
-<footer class=entry-footer><span title="2021-07-21 00:00:00 +0000 UTC">July 21, 2021</span></footer>
-<a class=entry-link aria-label="post link to Deploying the django app on the DigitalOcean App Platform" href=https://vostbur.github.io/posts/django-on-digitalocean-app-platform/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

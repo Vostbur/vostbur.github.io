@@ -66,6 +66,19 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Start Ansible for Docker containers
+</h2>
+</header>
+<section class=entry-content>
+<p>For some pet projects, I need multiple instances of different servers. The best way is to use Docker. And the best way to automate configuration services that run in docker containers is Ansible. This is the sequence of steps to run Ansible to configure containerized services in Ubuntu.
+Installing Docker Engine on Ubuntu is very well described on the official website. A summary of the steps:
+sudo apt-get update sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common curl -fsSL https://download....</p>
+</section>
+<footer class=entry-footer><span title="2020-09-19 00:00:00 +0000 UTC">September 19, 2020</span></footer>
+<a class=entry-link aria-label="post link to Start Ansible for Docker containers" href=https://vostbur.github.io/posts/start-ansible-for-docker-containers/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Watchdog for folder changes with golang
 </h2>
 </header>
@@ -214,22 +227,6 @@ show archive log config all
 </section>
 <footer class=entry-footer><span title="2020-04-05 00:00:00 +0000 UTC">April 5, 2020</span></footer>
 <a class=entry-link aria-label="post link to Логгирование команд на Cisco с помощью Event Manager" href=https://vostbur.github.io/posts/cisco-logging-using-event-manager/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Подключение к устаревшим Cisco по SSH
-</h2>
-</header>
-<section class=entry-content>
-<p>Если при попытке подключиться выдает что-то похожее на “no matching key exchange method found”:
-На Cisco (ip 192.168.2.2):
-длина ключа RSA должна быть больше 1024 создаем учетную запись пользователя (здесь - cisco) В linux:
-создаем ~/.ssh/config Host 192.168.2.2 KexAlgorithms +diffie-hellman-group1-sha1 Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc Алгоритмы могут быть другие, подходящие будут указаны в сообщении об ошибке.
-проверяем
-ssh 192.168.2.2 -l cisco При ошибке ‘connection refused’ помогает создание нового ключа:...</p>
-</section>
-<footer class=entry-footer><span title="2020-04-04 00:00:00 +0000 UTC">April 4, 2020</span></footer>
-<a class=entry-link aria-label="post link to Подключение к устаревшим Cisco по SSH" href=https://vostbur.github.io/posts/connecting-legacy-cisco-over-ssh/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
