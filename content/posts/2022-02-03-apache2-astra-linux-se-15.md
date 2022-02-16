@@ -44,7 +44,8 @@ Web-сервер Apache2, входящий в состав Astra Linux SE 1.5 Sm
 
         DocumentRoot /var/www/
         <Directory /var/www/>
-            Options Indexes FollowSymLinks MultiViews AllowOverride None
+            Options Indexes FollowSymLinks MultiViews
+            AllowOverride None
         </Directory>
 
         ErrorLog /var/log/apache2/error.log
