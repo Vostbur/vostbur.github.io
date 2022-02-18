@@ -71,9 +71,9 @@
 </header>
 <section class=entry-content>
 <p>Как настроить сервер - контроллер домена ALD и подключиться к нему клиентом в статье Настройка входа в систему с Astra Linux Directory.
-Запустим в Astra Linux SE 1.5 написанное на Python (Django) web-приложение, возвращающее имя пользователя. Web-сервер - входящий в дистрибутив apache2 с модулем mod_python, авторизация через Astra Linux Directory. Проверим работу мандатного разграничения доступа.
 Устанавливаем web-сервер (если еще не установлен), нужные нам модули apache и пакет с django
-$ sudo apt-get install apache2 libapache2-mod-auth-kerb libapache2-mod-python python-django Включаем модули apache, с которыми будем работать, отключаем лишний auth_pam, если ранее с ним работали, затем запускаем web-сервер...</p>
+$ sudo apt-get install apache2 libapache2-mod-auth-kerb libapache2-mod-python python-django Включаем модули apache, с которыми будем работать, отключаем лишний auth_pam, если ранее с ним работали, затем запускаем web-сервер
+$ sudo a2dismod auth_pam $ sudo a2enmod python $ sudo a2enmod auth_kerb $ sudo service apache2 reload Создаем принципала в ALD и добавляем его в группу mac...</p>
 </section>
 <footer class=entry-footer><span title="2022-02-18 00:00:00 +0000 UTC">February 18, 2022</span></footer>
 <a class=entry-link aria-label="post link to Web-приложение на Python в Astra Linux с ALD авторизацией" href=https://vostbur.github.io/posts/astra-linux-django-web-app-with-ald-auth/></a>
