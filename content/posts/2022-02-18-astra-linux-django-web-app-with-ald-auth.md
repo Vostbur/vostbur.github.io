@@ -2,18 +2,18 @@
 categories:
 - OS
 date: "2022-02-18"
-description: Запустим в Astra Linux SE 1.5 написанное на Python (Django) web-приложение, возвращающее имя пользователя. Web-сервер - входящий в дистрибутив `apache2` с модулем `mod_python`, авторизация через Astra Linux Directory. Проверим работу мандатного разграничения доступа.
+description: Запустим в Astra Linux SE 1.5 написанное на Python (Django) web-приложение, возвращающее имя пользователя. Web-сервер - входящий в дистрибутив apache2 с модулем mod_python, авторизация через Astra Linux Directory. Проверим работу мандатного разграничения доступа.
 slug: astra-linux-django-web-app-with-ald-auth
 tags:
 - linux
 - AstraLinux
 - ald
+- django
+- apache
 title: Web-приложение на Python в Astra Linux с ALD авторизацией
 ---
 
 Как настроить сервер - контроллер домена ALD и подключиться к нему клиентом в статье [Настройка входа в систему с Astra Linux Directory](https://vostbur.github.io/posts/ald-auth-astra-linux-se-15/).
-
-Запустим в Astra Linux SE 1.5 написанное на Python (Django) web-приложение, возвращающее имя пользователя. Web-сервер - входящий в дистрибутив `apache2` с модулем `mod_python`, авторизация через Astra Linux Directory. Проверим работу мандатного разграничения доступа.
 
 Устанавливаем web-сервер (если еще не установлен), нужные нам модули apache и пакет с django
 
@@ -181,3 +181,8 @@ title: Web-приложение на Python в Astra Linux с ALD авториз
 Доступ к странице с нулевым уровнем конфиденциальности `http://ald-server.example.ru/0.html` должен предоставляться.
 
 При входе на клиентский компьютер под пользовательской доменной учетной записью с ненулевым уровнем конфиденциальности должны быть доступны обе страницы.
+
+----
+### Links:
+
+- [1] [Настройка входа в систему с Astra Linux Directory](https://vostbur.github.io/posts/ald-auth-astra-linux-se-15/)
