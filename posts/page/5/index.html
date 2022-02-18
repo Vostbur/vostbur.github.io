@@ -66,6 +66,26 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Сохранение паролей в Windows Credentials Locker из Python
+</h2>
+</header>
+<section class=entry-content>
+<p> Ставим keyring
+pip install keyring
+Выполняем
+import keyring
+keyring.set_password("system", "username", "password")
+Результат
+Доступ к данным
+keyring.get_password("system", "username")
+'password'
+</p>
+</section>
+<footer class=entry-footer><span title="2020-04-08 00:00:00 +0000 UTC">April 8, 2020</span></footer>
+<a class=entry-link aria-label="post link to Сохранение паролей в Windows Credentials Locker из Python" href=https://vostbur.github.io/posts/saving-password-wcl-python/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Логгирование команд на Cisco с помощью Event Manager
 </h2>
 </header>

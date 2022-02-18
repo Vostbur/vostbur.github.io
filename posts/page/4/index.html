@@ -66,6 +66,20 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Cisco command 'history'
+</h2>
+</header>
+<section class=entry-content>
+<p>Starting from IOS 15.1 cisco command history is appeared. It outputs a pretty nice ASCII diagram of interfaces loading.
+For enable:
+(config)# interface GigabitEthernet 0/1 (config-if)# history bps Now you can see the result using the command:
+# show interface GigabitEthernet 0/1 history 60sec input The different periods (60sec, 60min, 72hour) and different traffic directions (input, output, both) are available.</p>
+</section>
+<footer class=entry-footer><span title="2020-09-24 00:00:00 +0000 UTC">September 24, 2020</span></footer>
+<a class=entry-link aria-label="post link to Cisco command 'history'" href=https://vostbur.github.io/posts/cisco-command-history/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Message 'Native VLAN mismatch discovered'
 </h2>
 </header>
@@ -204,26 +218,6 @@ R1(config-line)#login local...</p>
 </section>
 <footer class=entry-footer><span title="2020-04-09 00:00:00 +0000 UTC">April 9, 2020</span></footer>
 <a class=entry-link aria-label="post link to Начальное конфигурирование роутера Cisco" href=https://vostbur.github.io/posts/initial-config-cisco-router/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Сохранение паролей в Windows Credentials Locker из Python
-</h2>
-</header>
-<section class=entry-content>
-<p> Ставим keyring
-pip install keyring
-Выполняем
-import keyring
-keyring.set_password("system", "username", "password")
-Результат
-Доступ к данным
-keyring.get_password("system", "username")
-'password'
-</p>
-</section>
-<footer class=entry-footer><span title="2020-04-08 00:00:00 +0000 UTC">April 8, 2020</span></footer>
-<a class=entry-link aria-label="post link to Сохранение паролей в Windows Credentials Locker из Python" href=https://vostbur.github.io/posts/saving-password-wcl-python/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

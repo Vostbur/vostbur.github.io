@@ -66,6 +66,20 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Web-приложение на Python в Astra Linux с ALD авторизацией
+</h2>
+</header>
+<section class=entry-content>
+<p>Как настроить сервер - контроллер домена ALD и подключиться к нему клиентом в статье Настройка входа в систему с Astra Linux Directory.
+Запустим в Astra Linux SE 1.5 написанное на Python (Django) web-приложение, возвращающее имя пользователя. Web-сервер - входящий в дистрибутив apache2 с модулем mod_python, авторизация через Astra Linux Directory. Проверим работу мандатного разграничения доступа.
+Устанавливаем web-сервер (если еще не установлен), нужные нам модули apache и пакет с django
+$ sudo apt-get install apache2 libapache2-mod-auth-kerb libapache2-mod-python python-django Включаем модули apache, с которыми будем работать, отключаем лишний auth_pam, если ранее с ним работали, затем запускаем web-сервер...</p>
+</section>
+<footer class=entry-footer><span title="2022-02-18 00:00:00 +0000 UTC">February 18, 2022</span></footer>
+<a class=entry-link aria-label="post link to Web-приложение на Python в Astra Linux с ALD авторизацией" href=https://vostbur.github.io/posts/astra-linux-django-web-app-with-ald-auth/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Настройка входа в систему с Astra Linux Directory
 </h2>
 </header>
@@ -177,19 +191,6 @@ You may also need to update the origin for your repository if set to https:...</
 </section>
 <footer class=entry-footer><span title="2021-07-31 00:00:00 +0000 UTC">July 31, 2021</span></footer>
 <a class=entry-link aria-label="post link to How to push to GitHub via HTTPS if you have enabled two-factor authentication" href=https://vostbur.github.io/posts/push-github-two-factor-auth/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>The first acquaintance with the Cisco DevNet Sandbox
-</h2>
-</header>
-<section class=entry-content>
-<p>Cisco allows you to perform laboratory work or test the APIs in sandbox. It is completely free. All the necessary devices are available in the sandbox permanently or by reservation.
-Here’s what Cisco writes about it:
-DevNet Sandbox makes Cisco’s free spread of technology available to developers and engineers by providing packaged labs we call Sandboxes. That’s right, totally free! There are two types of sandboxes, Always-On and Reservation. Each sandbox typically highlight one Cisco product (think, CallManager, APIC, etc)....</p>
-</section>
-<footer class=entry-footer><span title="2021-07-25 00:00:00 +0000 UTC">July 25, 2021</span></footer>
-<a class=entry-link aria-label="post link to The first acquaintance with the Cisco DevNet Sandbox" href=https://vostbur.github.io/posts/first-acquaintance-with-cisco-devnet-sandbox/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
