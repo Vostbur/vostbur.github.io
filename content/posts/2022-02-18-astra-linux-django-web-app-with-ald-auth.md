@@ -111,7 +111,7 @@ title: Web-приложение на Python в Astra Linux с ALD авториз
 
     $ cd django_site
     $ sudo pdpl-file 3:0:0xffffffffffffffff:ccnr /var/www/  
-    $ sudo pdpl-file 3:0:0xffffffffffffffff:ccnr /var/www/django-admin/
+    $ sudo pdpl-file 3:0:0xffffffffffffffff:ccnr /var/www/django_site/
     $ sudo service apache2 restart
 
 На любом компьютере, который должен выступать в роли клиента, в firefox включаем negotiate авторизацию. Для чего открыть страницу `about:config` и добавить `http://` в параметр `network.negotiate-auth.trusted-uris`. 
