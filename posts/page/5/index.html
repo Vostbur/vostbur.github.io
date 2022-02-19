@@ -66,6 +66,37 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Начальное конфигурирование роутера Cisco
+</h2>
+</header>
+<section class=entry-content>
+<p>Если осталась старая конфигурация, удалить и перезапустить
+Cisco>enable
+Cisco#erase startup-config
+Cisco#reload
+Cisco>enable
+Новая конфигурация
+Cisco#configure terminal
+Назвать роутер
+Cisco(config)#hostname R1
+Хранить пароли в файле конфигурации в зашифрованном виде
+R1(config)#service password-encryption
+Отключить управление по http, https, CDP
+R1(config)#no ip http server
+R1(config)#no ip http secure-server
+R1(config)#no cdp run
+Отключить интерпретацию неправильно введенных команд как DNS-запрос
+R1(config)#no ip domain lookup
+Пароль на подключение по консольному порту
+R1(config)#line console 0
+R1(config-line)#password cisco
+R1(config-line)#login local...</p>
+</section>
+<footer class=entry-footer><span title="2020-04-09 00:00:00 +0000 UTC">April 9, 2020</span></footer>
+<a class=entry-link aria-label="post link to Начальное конфигурирование роутера Cisco" href=https://vostbur.github.io/posts/initial-config-cisco-router/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Сохранение паролей в Windows Credentials Locker из Python
 </h2>
 </header>

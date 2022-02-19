@@ -65,6 +65,20 @@
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>Django с PostgreSQL в Astra Linux SE 1.5
+</h2>
+</header>
+<section class=entry-content>
+<p>Устанавливаем необходимые пакеты с зависимостями: postgresql, python-psycopg2. В ALSE 1.5 основная версия PostgreSQL 9.4.5.
+Редактируем конфигурационный файл базы данных
+$ sudo vim /etc/postgresql/9.4/main/pg_hba.conf Комментируем или удаляем все строки и дописываем новые, разделяя поля табуляцией
+local all postgres trust local all all trust host all all 127.0.0.1/32 trust host all all 192.168.15.129/24 trust host all all 192.168.15.132/24 trust Последние строки - адреса сервера и клиента, которым будем подключаться. Меняйте на свои или укажите всю сеть, например 192....</p>
+</section>
+<footer class=entry-footer><span title="2022-02-19 00:00:00 +0000 UTC">February 19, 2022</span></footer>
+<a class=entry-link aria-label="post link to Django с PostgreSQL в Astra Linux SE 1.5" href=https://vostbur.github.io/posts/astra-linux-django-web-app-with-postgresql/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>Web-приложение на Python в Astra Linux с ALD авторизацией
 </h2>
 </header>

@@ -66,6 +66,20 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Django с PostgreSQL в Astra Linux SE 1.5
+</h2>
+</header>
+<section class=entry-content>
+<p>Устанавливаем необходимые пакеты с зависимостями: postgresql, python-psycopg2. В ALSE 1.5 основная версия PostgreSQL 9.4.5.
+Редактируем конфигурационный файл базы данных
+$ sudo vim /etc/postgresql/9.4/main/pg_hba.conf Комментируем или удаляем все строки и дописываем новые, разделяя поля табуляцией
+local all postgres trust local all all trust host all all 127.0.0.1/32 trust host all all 192.168.15.129/24 trust host all all 192.168.15.132/24 trust Последние строки - адреса сервера и клиента, которым будем подключаться. Меняйте на свои или укажите всю сеть, например 192....</p>
+</section>
+<footer class=entry-footer><span title="2022-02-19 00:00:00 +0000 UTC">February 19, 2022</span></footer>
+<a class=entry-link aria-label="post link to Django с PostgreSQL в Astra Linux SE 1.5" href=https://vostbur.github.io/posts/astra-linux-django-web-app-with-postgresql/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Web-приложение на Python в Astra Linux с ALD авторизацией
 </h2>
 </header>
@@ -179,18 +193,6 @@ Links: [1] Ansible playbook for for deploying docker on DO droplet [2] Youtube-�
 </section>
 <footer class=entry-footer><span title="2021-08-15 00:00:00 +0000 UTC">August 15, 2021</span></footer>
 <a class=entry-link aria-label="post link to Starting a remote docker development server on DigitalOcean droplet" href=https://vostbur.github.io/posts/starting-remote-docker-dev-server/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>How to push to GitHub via HTTPS if you have enabled two-factor authentication
-</h2>
-</header>
-<section class=entry-content>
-<p>If you enabled two-factor authentication in your Github account you won’t be able to push via HTTPS using your accounts password. Instead you need to generate a personal access token. This can be done in the application settings of your Github account. Using this token as your password should allow you to push to your remote repository via HTTPS. Use your username as usual.
-You may also need to update the origin for your repository if set to https:...</p>
-</section>
-<footer class=entry-footer><span title="2021-07-31 00:00:00 +0000 UTC">July 31, 2021</span></footer>
-<a class=entry-link aria-label="post link to How to push to GitHub via HTTPS if you have enabled two-factor authentication" href=https://vostbur.github.io/posts/push-github-two-factor-auth/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
