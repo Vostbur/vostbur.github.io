@@ -1,0 +1,134 @@
+!
+version 15.0
+service timestamps log datetime msec
+service timestamps debug datetime msec
+service password-encryption
+!
+hostname S1
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+!
+ip ssh version 2
+no ip domain-lookup
+ip domain-name site.info
+!
+username cisco secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ switchport access vlan 50
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/3
+ switchport access vlan 60
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/4
+ switchport access vlan 5
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/5
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/8
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/9
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/10
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/11
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/12
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/13
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/14
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/15
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/16
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/17
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/18
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/19
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/20
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/21
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/22
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/23
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/24
+ spanning-tree bpduguard enable
+!
+interface GigabitEthernet0/1
+ switchport trunk allowed vlan 1-1001
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ ip address 5.87.0.18 255.255.255.252
+!
+ip default-gateway 5.87.0.17
+!
+logging trap debugging
+logging 5.87.0.14
+!
+!
+!
+access-list 1 permit host 5.87.0.2
+access-list 1 deny any
+line con 0
+!
+line vty 0 4
+ access-class 1 in
+ login local
+ transport input ssh
+line vty 5 15
+ access-class 1 in
+ login local
+ transport input ssh
+!
+!
+!
+ntp server 5.87.0.14
+!
+end
+
