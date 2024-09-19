@@ -2,7 +2,6 @@
 categories:
 - Tools
 date: "2024-09-19"
-description: Логирование vESR на удаленный сервер rsyslog
 slug: vesr-logs-to-remote-rsyslog-server
 tags:
 - Eltex
